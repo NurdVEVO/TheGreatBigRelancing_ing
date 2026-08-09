@@ -4,6 +4,8 @@
 
 For **Nuclear Option 0.34**.
 
+For the complete player-facing breakdown, see [Detailed Changes](https://github.com/NurdVEVO/TheGreatBigRelancing_ing/blob/main/DETAILED_CHANGES.md).
+
 ### Additions
 
 - Added the **F-16VX Viper II** as a separate `$70m` aircraft when the Aryx F-16M King Viper is installed.

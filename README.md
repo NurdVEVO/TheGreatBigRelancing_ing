@@ -2,7 +2,7 @@
 
 The Great Big Rebalancing, or TGBR, is a balance and utility mod for **Nuclear Option 0.34**. It tones down oppressive equipment, adds new aircraft options, restores a few older mechanics, and provides tools for editing aircraft pylons.
 
-See [CHANGELOG.md](CHANGELOG.md) for the first-release changes.
+See the short [release notes](CHANGELOG.md) or the [detailed user-facing changes](DETAILED_CHANGES.md).
 
 ## Installation
 
