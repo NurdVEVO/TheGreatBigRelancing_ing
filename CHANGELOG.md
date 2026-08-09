@@ -14,7 +14,7 @@ For the complete player-facing breakdown, see [Detailed Changes](https://github.
   - Three `$27m` centerline electronic-warfare pods.
   - NATO-facing weapon names and a six-bomb GBU-38 rack.
 - Added new outer IRM-S2 pylons and a two-position centerline mount to the **F-99 Shrike**.
-- Added a revised pylon and weapon configuration for the **FS-3 Ternion**.
+- Added a revised pylon and weapon configuration for the **Project 2082 FS-3 Ternion**.
 - Restored the targeted/red radar-warning indication from before update 0.34.
 - Added high-altitude contrails, fading from invisible at `6,000 m / 19,685 ft` to full strength at `7,500 m / 24,606 ft`.
 - Added explicit multiplayer separation from vanilla and mismatched TGBR clients.
@@ -62,4 +62,4 @@ For the complete player-facing breakdown, see [Detailed Changes](https://github.
 - TGBR matchmaking protocol: `tgbr-v57`
 - DLL SHA-256: `330E1459532F9192D32CEC589399F672F39E291C1BFF04BF6EABD1FCDDC5C1DC`
 
-Aryx-dependent changes activate only when their source aircraft are already installed.
+Aryx- and Project 2082-dependent changes activate only when their source aircraft are already installed.

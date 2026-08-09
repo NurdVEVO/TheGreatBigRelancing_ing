@@ -21,13 +21,13 @@ Every player, host, and dedicated server in a multiplayer session must use the s
 - Reworks the AB-4 into the less oppressive `AB-4 "Buford"`, leaving the IRM-S2 as its only air-to-air missile.
 - Adds long-range high-altitude contrails with a gradual fade-in between 6,000 m and 7,500 m.
 
-## Optional Aryx aircraft changes
+## Optional aircraft-mod changes
 
-These features appear only when their source Aryx aircraft are already installed. TGBR does not load Aryx content by itself.
+These features appear only when their source aircraft mods are already installed. TGBR does not load Aryx or Project 2082 content by itself.
 
-- **F-99 Shrike:** new outer IRM-S2 pylons and a two-position centerline mount.
-- **F-16VX Viper II:** a separate `$70m` King Viper variant with more capacitor capacity, more flares, dedicated electronic-warfare pods, NATO-facing weapon names, and a six-bomb GBU-38 rack.
-- **FS-3 Ternion:** a revised and consistently enforced pylon/loadout configuration.
+- **Aryx F-99 Shrike:** new outer IRM-S2 pylons and a two-position centerline mount.
+- **Aryx F-16VX Viper II:** a separate `$70m` King Viper variant with more capacitor capacity, more flares, dedicated electronic-warfare pods, NATO-facing weapon names, and a six-bomb GBU-38 rack.
+- **Project 2082 FS-3 Ternion:** a revised and consistently enforced pylon/loadout configuration.
 
 ## Multiplayer compatibility
 

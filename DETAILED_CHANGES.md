@@ -120,7 +120,7 @@ All three pods cost `$27m`. They are shorter, slimmer, lighter, and less draggy 
 
 ## FS-3 Ternion
 
-These changes require the Aryx FS-3 Ternion to already be installed.
+These changes require the Project 2082 FS-3 Ternion to already be installed.
 
 - Applies one consistent loadout policy to selector previews, deployed aircraft, AI, saved loadouts, and multiplayer validation.
 - Revises all nine weapon groups: Internal Cannon, Combined Weapon Bay, Forward Weapon Bay, Rear Weapon Bay, Front Fuselage Pylons, Rear Fuselage Pylons, Inner Wing Pylons, Middle Wing Pylons, and Outer Wing Pylons.
@@ -159,4 +159,4 @@ These changes require the Aryx FS-3 Ternion to already be installed.
 - TGBR matchmaking protocol: `tgbr-v57`
 - Release DLL SHA-256: `330E1459532F9192D32CEC589399F672F39E291C1BFF04BF6EABD1FCDDC5C1DC`
 
-Aryx-dependent changes are conditional. TGBR does not install or force-load Aryx aircraft.
+Aryx- and Project 2082-dependent changes are conditional. TGBR does not install or force-load either mod's aircraft.
