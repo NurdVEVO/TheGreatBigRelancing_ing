@@ -1,0 +1,18 @@
+bin/
+obj/
+.vs/
+.idea/
+*.user
+*.suo
+*.nupkg
+*.log
+
+# Local development and release artifacts.
+.codex-remote-attachments/
+dist/
+
+# Extracted Nuclear Option reference asset; do not redistribute it.
+Assets/Textures/PAB-250/bombs1_b.png
+
+# Local machine overrides (game/reference paths, deployment preferences).
+Directory.Build.local.props

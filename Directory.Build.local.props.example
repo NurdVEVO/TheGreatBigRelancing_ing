@@ -1,0 +1,7 @@
+<Project>
+  <PropertyGroup>
+    <!-- Copy this file to Directory.Build.local.props and adjust for your machine. -->
+    <NuclearOptionReferenceRoot>D:\Path\To\NuclearOption-0.34-ReferenceAssemblies</NuclearOptionReferenceRoot>
+    <NuclearOptionRoot>D:\SteamLibrary\steamapps\common\Nuclear Option</NuclearOptionRoot>
+  </PropertyGroup>
+</Project>

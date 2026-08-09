@@ -1,0 +1,12 @@
+<Project>
+  <PropertyGroup>
+    <!-- Override either value in Directory.Build.local.props or on the command line. -->
+    <NuclearOptionReferenceRoot Condition="'$(NuclearOptionReferenceRoot)' == '' and '$(NUCLEAR_OPTION_034_REFERENCE)' != ''">$(NUCLEAR_OPTION_034_REFERENCE)</NuclearOptionReferenceRoot>
+
+    <NuclearOptionRoot Condition="'$(NuclearOptionRoot)' == '' and '$(NUCLEAR_OPTION_ROOT)' != ''">$(NUCLEAR_OPTION_ROOT)</NuclearOptionRoot>
+    <BepInExCore>$(NuclearOptionRoot)\BepInEx\core</BepInExCore>
+
+    <!-- Deployment is deliberately opt-in: dotnet build -p:DeployToGame=true -->
+    <DeployToGame Condition="'$(DeployToGame)' == ''">false</DeployToGame>
+  </PropertyGroup>
+</Project>
