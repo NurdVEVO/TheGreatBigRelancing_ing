@@ -19,7 +19,8 @@ namespace TheGreatBigRebalancing
         internal static ManualLogSource ModLogger { get; private set; }
 
         private Harmony harmony;
-        private Tools.AircraftSelectorPylonEditor pylonEditor;
+        // HPW Editor 2 is intentionally disabled for the 0.4.65 release.
+        // private Tools.AircraftSelectorPylonEditor pylonEditor;
         private Visuals.HighAltitudeEngineSmoke highAltitudeEngineSmoke;
 
         private void Awake()
@@ -39,22 +40,18 @@ namespace TheGreatBigRebalancing
             harmony.PatchAll(typeof(Plugin).Assembly);
             if (!GameManager.IsHeadless)
             {
-                pylonEditor = new Tools.AircraftSelectorPylonEditor(Logger);
+                // pylonEditor = new Tools.AircraftSelectorPylonEditor(Logger);
                 highAltitudeEngineSmoke = new Visuals.HighAltitudeEngineSmoke(Logger);
             }
             Logger.LogInfo(
                 PluginName + " " + PluginVersion + " loaded. Multiplayer compatibility: " +
                 Networking.ServerSeparation.CompatibilityVersion() + ".");
-            if (!GameManager.IsHeadless)
-            {
-                Logger.LogInfo("The pylon editor opens automatically in the aircraft selector.");
-            }
         }
 
         private void OnDestroy()
         {
-            pylonEditor?.Dispose();
-            pylonEditor = null;
+            // pylonEditor?.Dispose();
+            // pylonEditor = null;
             highAltitudeEngineSmoke?.Dispose();
             highAltitudeEngineSmoke = null;
             harmony?.UnpatchSelf();
@@ -68,13 +65,13 @@ namespace TheGreatBigRebalancing
             Balance.F16ViperII.TryApplyPending();
             Balance.TernionLoadoutRebalance.TryApplyPending();
             highAltitudeEngineSmoke?.Update();
-            pylonEditor?.Update();
+            // pylonEditor?.Update();
         }
 
-        private void OnGUI()
-        {
-            pylonEditor?.OnGUI();
-        }
+        // private void OnGUI()
+        // {
+        //     pylonEditor?.OnGUI();
+        // }
 
     }
 }

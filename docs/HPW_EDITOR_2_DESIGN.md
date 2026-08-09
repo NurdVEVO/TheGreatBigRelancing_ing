@@ -1,5 +1,7 @@
 # HPW Editor 2 design contract
 
+> **Release status:** HPW Editor 2 is retained for development but commented out at the Plugin entry points and excluded from the compiled 0.4.65 release.
+
 ## Purpose
 
 HPW Editor 2 replaces the aircraft-selector editor's scattered tab and tool-window flow with:

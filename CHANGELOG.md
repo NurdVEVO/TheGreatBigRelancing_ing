@@ -17,7 +17,6 @@ For the complete player-facing breakdown, see [Detailed Changes](https://github.
 - Added a revised pylon and weapon configuration for the **FS-3 Ternion**.
 - Restored the targeted/red radar-warning indication from before update 0.34.
 - Added high-altitude contrails, fading from invisible at `6,000 m / 19,685 ft` to full strength at `7,500 m / 24,606 ft`.
-- Added **HPW Editor 2** to the aircraft selector for editing aircraft pylons, hardpoints, attachments, models, links, weapon limits, and positions.
 - Added explicit multiplayer separation from vanilla and mismatched TGBR clients.
 
 ### Removals
@@ -26,7 +25,7 @@ For the complete player-facing breakdown, see [Detailed Changes](https://github.
 - Removed all AB-4 air-to-air missiles except the **IRM-S2**.
 - Removed ordinary weapons from the Viper II centerline; it accepts only its three electronic-warfare pods.
 - Removed the IRM-S2 from the Viper II.
-- Removed the obsolete pylon-editor and weapon-workshop interfaces replaced by HPW Editor 2.
+- Disabled **HPW Editor 2** and its weapon workshop for this release. Their source is retained for later development but excluded from the compiled DLL.
 
 ### Changes
 
@@ -53,8 +52,6 @@ For the complete player-facing breakdown, see [Detailed Changes](https://github.
 - Fixed Viper II aircraft, weapons, racks, flares, and jammer pods disappearing or behaving incorrectly after deployment.
 - Fixed OJS activation, target selection, missile priority, and recharge-lock behaviour.
 - Fixed F-99 centerline positioning, naming, linking, and mirrored stores.
-- Fixed Ternion and similar aircraft moving the weapon instead of the pylon assembly in the editor.
-- Fixed pylon model changes resetting placement, incorrect mirroring, and the selector free camera being pinned in place.
 - Fixed excessive or abruptly appearing contrails.
 - Added safeguards against removed or disallowed weapons returning through old loadouts.
 
@@ -63,6 +60,6 @@ For the complete player-facing breakdown, see [Detailed Changes](https://github.
 - Nuclear Option: `0.34`
 - BepInEx: `5.4.23.4`
 - TGBR matchmaking protocol: `tgbr-v57`
-- DLL SHA-256: `A52886BBCB0785B0B8B17E11F6CA2B3526EBEA4A0573CB2A2134E457D86338CB`
+- DLL SHA-256: `330E1459532F9192D32CEC589399F672F39E291C1BFF04BF6EABD1FCDDC5C1DC`
 
 Aryx-dependent changes activate only when their source aircraft are already installed.

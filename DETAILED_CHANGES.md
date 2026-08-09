@@ -21,6 +21,11 @@ This is the full player-facing breakdown of TGBR's first release for **Nuclear O
 - Vanilla clients and clients using a different TGBR version cannot join.
 - Every player, host, and dedicated server must use the same release.
 
+### Disabled development tooling
+
+- HPW Editor 2 and its weapon workshop are disabled in this release.
+- Their source is retained for future development but excluded from the compiled mod.
+
 ## T/A-30 Compass
 
 - Dry mass is restored from update 0.34's `6,110.64478 kg` to the pre-0.34 value of `5,320 kg`.
@@ -134,42 +139,6 @@ These changes require the Aryx FS-3 Ternion to already be installed.
 - Contrails remain visible at long range and are generated consistently for compatible clients.
 - The system is limited to one trail per active exhaust point and sleeps when no trail is needed.
 
-## HPW Editor 2
-
-HPW Editor 2 is available from the aircraft selector and is intended for preparing aircraft pylon configurations without hand-editing them.
-
-### Pylon structure
-
-- View every pylon set and its physical hardpoints.
-- Add, rename, mirror, or remove hardpoints.
-- Add, rename, or remove complete pylon sets.
-- Original game hardpoints and sets require a second confirmation before removal.
-- Link adjacent pylon sets so they share one store selection.
-- Configure pylon or bay exclusions.
-
-### Placement and attachment
-
-- Move, rotate, and scale the visible pylon assembly or the weapon attachment point separately.
-- Mirror a hardpoint across the aircraft while keeping it facing the same direction.
-- Change the aircraft part and damageable section to which a hardpoint is attached.
-- Use `Choose nearest` for visual feedback when selecting an attachment part.
-- Choose a pylon model from those used by loaded aircraft.
-- Keep placement when changing pylon models.
-
-### Weapons and export
-
-- Search for and change the weapons allowed on each pylon set.
-- Copy, replace, or merge weapon allow-lists between pylons.
-- Configure removable pylon visuals and the game's `Base` option.
-- Preview the configuration before exporting it.
-- Export pylon names, hardpoints, links, positions, attachments, models, and weapon restrictions in one configuration.
-
-### Camera
-
-- Includes a free camera for inspecting pylons in the aircraft selector.
-- Hold RMB to look and use WASD/QE to move.
-- Shift and Ctrl adjust movement speed, while the mouse wheel changes the base speed.
-
 ## Player-facing fixes
 
 - Fixed AB-4 renaming preventing correct aircraft selection.
@@ -180,10 +149,6 @@ HPW Editor 2 is available from the aircraft selector and is intended for prepari
 - Fixed OJS jamming failing to activate with aircraft Radar ECM.
 - Fixed OJS missile priority, semi-active radar source selection, and low-power recharge lock.
 - Fixed the F-99 centerline positions, names, linking, and shared stores.
-- Fixed pylon editing moving the mounted weapon instead of the visible pylon on the Ternion and similar aircraft.
-- Fixed changing a pylon model resetting its position.
-- Fixed hardpoint mirroring using the wrong axis or reversing its facing direction.
-- Fixed the aircraft-selector free camera being held in place by the normal selector camera.
 - Fixed excessive contrail spawning and abrupt on/off visibility.
 - Fixed removed or disallowed weapons returning through old saves, AI loadouts, or custom missions.
 
@@ -192,6 +157,6 @@ HPW Editor 2 is available from the aircraft selector and is intended for prepari
 - Nuclear Option: `0.34`
 - BepInEx: `5.4.23.4`
 - TGBR matchmaking protocol: `tgbr-v57`
-- Release DLL SHA-256: `A52886BBCB0785B0B8B17E11F6CA2B3526EBEA4A0573CB2A2134E457D86338CB`
+- Release DLL SHA-256: `330E1459532F9192D32CEC589399F672F39E291C1BFF04BF6EABD1FCDDC5C1DC`
 
 Aryx-dependent changes are conditional. TGBR does not install or force-load Aryx aircraft.

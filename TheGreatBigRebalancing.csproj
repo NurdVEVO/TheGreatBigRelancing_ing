@@ -14,6 +14,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <!-- HPW Editor 2 is retained in source but excluded from the 0.4.65 release. -->
+    <Compile Remove="Tools\AircraftSelectorPylonEditor*.cs" />
+    <Compile Remove="Tools\WeaponMountWorkshop.cs" />
+
     <Reference Include="0Harmony">
       <HintPath>$(BepInExCore)\0Harmony.dll</HintPath>
       <Private>false</Private>

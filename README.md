@@ -20,7 +20,6 @@ Every player, host, and dedicated server in a multiplayer session must use the s
 - Restores the T/A-30 Compass to its lighter pre-0.34 dry mass while keeping its current thrust.
 - Reworks the AB-4 into the less oppressive `AB-4 "Buford"`, leaving the IRM-S2 as its only air-to-air missile.
 - Adds long-range high-altitude contrails with a gradual fade-in between 6,000 m and 7,500 m.
-- Adds HPW Editor 2 to the aircraft selector for creating, moving, mirroring, renaming, linking, and restricting pylons.
 
 ## Optional Aryx aircraft changes
 
