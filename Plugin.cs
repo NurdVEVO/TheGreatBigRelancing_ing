@@ -10,17 +10,18 @@ namespace TheGreatBigRebalancing
     {
         public const string PluginGuid = "com.nurd.basic.thegreatbigrebalancing";
         public const string PluginName = "The Great Big Rebalancing";
-        public const string PluginVersion = "0.4.65";
+        public const string PluginVersion = "0.4.66";
 
         // Increment both values whenever a release changes network-visible data or behavior.
-        internal const string MatchmakingProtocol = "tgbr-v57";
-        internal const uint BuildHashSalt = 0x54474239u;
+        internal const string MatchmakingProtocol = "tgbr-v58";
+        internal const uint BuildHashSalt = 0x5447423Au;
 
         internal static ManualLogSource ModLogger { get; private set; }
 
         private Harmony harmony;
-        // HPW Editor 2 is intentionally disabled for the 0.4.65 release.
-        // private Tools.AircraftSelectorPylonEditor pylonEditor;
+#if HPW_EDITOR
+        private Tools.AircraftSelectorPylonEditor pylonEditor;
+#endif
         private Visuals.HighAltitudeEngineSmoke highAltitudeEngineSmoke;
 
         private void Awake()
@@ -40,7 +41,9 @@ namespace TheGreatBigRebalancing
             harmony.PatchAll(typeof(Plugin).Assembly);
             if (!GameManager.IsHeadless)
             {
-                // pylonEditor = new Tools.AircraftSelectorPylonEditor(Logger);
+#if HPW_EDITOR
+                pylonEditor = new Tools.AircraftSelectorPylonEditor(Logger);
+#endif
                 highAltitudeEngineSmoke = new Visuals.HighAltitudeEngineSmoke(Logger);
             }
             Logger.LogInfo(
@@ -50,8 +53,10 @@ namespace TheGreatBigRebalancing
 
         private void OnDestroy()
         {
-            // pylonEditor?.Dispose();
-            // pylonEditor = null;
+#if HPW_EDITOR
+            pylonEditor?.Dispose();
+            pylonEditor = null;
+#endif
             highAltitudeEngineSmoke?.Dispose();
             highAltitudeEngineSmoke = null;
             harmony?.UnpatchSelf();
@@ -62,16 +67,21 @@ namespace TheGreatBigRebalancing
         private void Update()
         {
             Balance.F99PylonExpansion.TryApplyPending();
+            Balance.Fs41TargetingPodPylon.TryApplyPending();
             Balance.F16ViperII.TryApplyPending();
             Balance.TernionLoadoutRebalance.TryApplyPending();
             highAltitudeEngineSmoke?.Update();
-            // pylonEditor?.Update();
+#if HPW_EDITOR
+            pylonEditor?.Update();
+#endif
         }
 
-        // private void OnGUI()
-        // {
-        //     pylonEditor?.OnGUI();
-        // }
+#if HPW_EDITOR
+        private void OnGUI()
+        {
+            pylonEditor?.OnGUI();
+        }
+#endif
 
     }
 }

@@ -13,11 +13,21 @@
     <PluginDeployDirectory>$(NuclearOptionRoot)\BepInEx\plugins\$(AssemblyName)</PluginDeployDirectory>
   </PropertyGroup>
 
-  <ItemGroup>
-    <!-- HPW Editor 2 is retained in source but excluded from the 0.4.65 release. -->
+  <!-- Prevent a machine-local development setting from entering a normal release. -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <EnableHpwEditor>false</EnableHpwEditor>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(EnableHpwEditor)' == 'true'">
+    <DefineConstants>$(DefineConstants);HPW_EDITOR</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(EnableHpwEditor)' != 'true'">
     <Compile Remove="Tools\AircraftSelectorPylonEditor*.cs" />
     <Compile Remove="Tools\WeaponMountWorkshop.cs" />
+  </ItemGroup>
 
+  <ItemGroup>
     <Reference Include="0Harmony">
       <HintPath>$(BepInExCore)\0Harmony.dll</HintPath>
       <Private>false</Private>

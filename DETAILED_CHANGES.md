@@ -1,57 +1,88 @@
-# Detailed Changes — 0.4.65
+# Detailed Changes
 
-This is the full player-facing breakdown of TGBR's first release for **Nuclear Option 0.34**. It explains what changed and how it affects play without covering the internal mod code.
+This is the full player-facing breakdown of TGBR for **Nuclear Option 0.34**. It explains what changed and how it affects play without covering the internal mod code.
 
-## Global changes
+## 0.4.66 — Aryx Weapon Pack compatibility pass
 
-### AAM-36 Scimitar removal
+### F-99 Shrike
+
+- Adds a dedicated station for the ETS targeting pod when the Aryx Weapon Pack is installed.
+- Corrects the added outer-pylon models and their final placement.
+- Preserves the linked fore and aft centerline arrangement and its existing weapon limits.
+- Removes invalid pylon-visual data from the targeting-pod station so it remains visually clean.
+
+### FS-41 Eclipse
+
+- Adds a dedicated station for the ETS targeting pod.
+- Adds a pair of outboard stations carrying one MMR-S3 each.
+- Loaded outboard stations activate the aircraft's existing Wing Glove pylon fairings.
+- Adds a dedicated pair of drop-tank stations carrying the 450 kg or 1,200 kg tanks.
+- Limits the moving Wing Pylons to single MMR-S3 and AAM-29 Scythe missiles.
+- Removes triple AAM-29 Scythe racks, ARAD-116 missiles, and drop tanks from the Wing Glove Pylons.
+- Drop tanks must now use their dedicated stations.
+
+### Compatibility and development tooling
+
+- Updates TGBR multiplayer separation to protocol `tgbr-v58`.
+- Aryx-dependent additions activate only when their source aircraft and weapon content are installed.
+- HPW Editor 2 remains in the source tree for development but is excluded from the public DLL.
+
+---
+
+## 0.4.65 — First release
+
+The following sections describe TGBR's first public release.
+
+### Global changes
+
+#### AAM-36 Scimitar removal
 
 - The AAM-36 Scimitar is no longer available on any aircraft.
 - Single, double, internal, compact, triple, and AB-4 eight-missile mounts are all removed from usable loadouts.
 - Old saves, AI loadouts, and custom missions cannot bring it back into play.
 
-### Radar warning receiver
+#### Radar warning receiver
 
 - The targeted/red radar-warning indication from before update 0.34 has been restored.
 - Ordinary radar illumination remains distinct from an aircraft actively targeting you.
 
-### Multiplayer separation
+#### Multiplayer separation
 
 - TGBR games are marked as modded and use protocol `tgbr-v57`.
 - Vanilla clients and clients using a different TGBR version cannot join.
 - Every player, host, and dedicated server must use the same release.
 
-### Disabled development tooling
+#### Disabled development tooling
 
 - HPW Editor 2 and its weapon workshop are disabled in this release.
 - Their source is retained for future development but excluded from the compiled mod.
 
-## T/A-30 Compass
+### T/A-30 Compass
 
 - Dry mass is restored from update 0.34's `6,110.64478 kg` to the pre-0.34 value of `5,320 kg`.
 - Update 0.34 engine power is retained at `31,600 N` per engine, or `63,200 N` total.
 - The result is a lighter Compass with the current engine performance.
 
-## AB-4 “Buford”
+### AB-4 “Buford”
 
-### Identity
+#### Identity
 
 - The practical player-facing name is now `AB-4 "Buford"`.
 - Its description now identifies it as an Alkyon Bernard Design Bureau supersonic bomber and electronic-warfare support platform.
 
-### Weapons and pylons
+#### Weapons and pylons
 
 - The IRM-S2 is now the AB-4's only air-to-air missile.
 - The eight-round AAM-29 Scythe and AAM-36 Scimitar options are removed from its main bays.
 - The external wing pylons are split into independent left and right stations instead of sharing one selection.
 - Existing paired loadouts are carried over to both independent stations where possible.
 
-### Jammers
+#### Jammers
 
 - Each physical AB-4 jammer pod can jam two targets.
 - Carrying both pods provides up to four simultaneous jammer targets.
 
-## F-99 Shrike
+### F-99 Shrike
 
 These changes require the Aryx F-99 Shrike to already be installed.
 
@@ -63,25 +94,25 @@ These changes require the Aryx F-99 Shrike to already be installed.
 - The paired centerline keeps the original requirement for the weapon bay to be empty.
 - Centerline weapons are limited to AGM-68, CB-400, and GPO-500.
 
-## F-16VX Viper II
+### F-16VX Viper II
 
 These changes require the Aryx F-16M King Viper to already be installed. The original F-16M remains available and unchanged.
 
-### Aircraft
+#### Aircraft
 
 - Adds the `F-16VX Viper II` as a separate aircraft costing `$70m`.
 - F-16M liveries are available on the Viper II.
 - Capacitor capacity is increased from `400 kJ` to `500 kJ`.
 - The centerline accepts only the Viper II's electronic-warfare pods.
 
-### Flares
+#### Flares
 
 - Flare ammunition is increased from `64` to `160`.
 - One extra flare point is added to each inner-wing pylon.
 - Both wing points fire alongside the normal dispensers, producing four flares per cycle.
 - The aircraft receives 40 complete four-flare dispenses, compared with 32 stock dispenses.
 
-### Electronic-warfare pods
+#### Electronic-warfare pods
 
 All three pods cost `$27m`. They are shorter, slimmer, lighter, and less draggy than the original pod model.
 
@@ -101,7 +132,7 @@ All three pods cost `$27m`. They are shorter, slimmer, lighter, and less draggy 
   - Mounts as a passive electronic-warfare suite in this release.
   - Does not provide a directional-jamming target.
 
-### Weapons
+#### Weapons
 
 - Adds a six-bomb GBU-38 JDAM rack to the inner-wing pylons.
 - Viper II weapon mounts use NATO-facing names:
@@ -118,7 +149,7 @@ All three pods cost `$27m`. They are shorter, slimmer, lighter, and less draggy 
 - The IRM-S2 is removed from Viper II loadouts.
 - The AAM-36 is unavailable because of the global Scimitar removal.
 
-## FS-3 Ternion
+### FS-3 Ternion
 
 These changes require the Project 2082 FS-3 Ternion to already be installed.
 
@@ -128,7 +159,7 @@ These changes require the Project 2082 FS-3 Ternion to already be installed.
 - Keeps the Ternion's removable `Base` pylon visuals.
 - Removes all AAM-36 options in line with the global Scimitar removal.
 
-## High-altitude contrails
+### High-altitude contrails
 
 - Compatible powered aircraft form visible white engine contrails at altitude.
 - Contrails begin at `6,000 m / 19,685 ft` above sea level.
@@ -139,7 +170,7 @@ These changes require the Project 2082 FS-3 Ternion to already be installed.
 - Contrails remain visible at long range and are generated consistently for compatible clients.
 - The system is limited to one trail per active exhaust point and sleeps when no trail is needed.
 
-## Player-facing fixes
+### Player-facing fixes
 
 - Fixed AB-4 renaming preventing correct aircraft selection.
 - Fixed Viper II failing to appear when its source aircraft was available.
@@ -152,7 +183,7 @@ These changes require the Project 2082 FS-3 Ternion to already be installed.
 - Fixed excessive contrail spawning and abrupt on/off visibility.
 - Fixed removed or disallowed weapons returning through old saves, AI loadouts, or custom missions.
 
-## Compatibility
+### Compatibility
 
 - Nuclear Option: `0.34`
 - BepInEx: `5.4.23.4`

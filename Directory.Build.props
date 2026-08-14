@@ -1,4 +1,7 @@
 <Project>
+  <Import Project="$(MSBuildThisFileDirectory)Directory.Build.local.props"
+          Condition="Exists('$(MSBuildThisFileDirectory)Directory.Build.local.props')" />
+
   <PropertyGroup>
     <!-- Override either value in Directory.Build.local.props or on the command line. -->
     <NuclearOptionReferenceRoot Condition="'$(NuclearOptionReferenceRoot)' == '' and '$(NUCLEAR_OPTION_034_REFERENCE)' != ''">$(NUCLEAR_OPTION_034_REFERENCE)</NuclearOptionReferenceRoot>
@@ -8,5 +11,8 @@
 
     <!-- Deployment is deliberately opt-in: dotnet build -p:DeployToGame=true -->
     <DeployToGame Condition="'$(DeployToGame)' == ''">false</DeployToGame>
+
+    <!-- HPW Editor is a development tool and is excluded unless explicitly enabled. -->
+    <EnableHpwEditor Condition="'$(EnableHpwEditor)' == ''">false</EnableHpwEditor>
   </PropertyGroup>
 </Project>

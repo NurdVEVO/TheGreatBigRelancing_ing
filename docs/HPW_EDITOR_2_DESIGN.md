@@ -1,6 +1,6 @@
 # HPW Editor 2 design contract
 
-> **Release status:** HPW Editor 2 is retained for development but commented out at the Plugin entry points and excluded from the compiled 0.4.65 release.
+> **Release status:** HPW Editor 2 is retained in source but excluded from ordinary release builds. Enable it explicitly with `-p:EnableHpwEditor=true` for development builds.
 
 ## Purpose
 

@@ -1,6 +1,6 @@
 # The Great Big Rebalancing
 
-The Great Big Rebalancing, or TGBR, is a balance and utility mod for **Nuclear Option 0.34**. It tones down oppressive equipment, adds new aircraft options, restores a few older mechanics, and provides tools for editing aircraft pylons.
+The Great Big Rebalancing, or TGBR, is a balance and compatibility mod for **Nuclear Option 0.34**. It tones down oppressive equipment, adds new aircraft options, restores a few older mechanics, and expands supported mod aircraft.
 
 See the short [release notes](CHANGELOG.md) or the [detailed user-facing changes](DETAILED_CHANGES.md).
 
@@ -26,12 +26,13 @@ Every player, host, and dedicated server in a multiplayer session must use the s
 These features appear only when their source aircraft mods are already installed. TGBR does not load Aryx or Project 2082 content by itself.
 
 - **Aryx F-99 Shrike:** new outer IRM-S2 pylons and a two-position centerline mount.
+- **Aryx FS-41 Eclipse:** dedicated targeting-pod and drop-tank stations, two new outboard MMR-S3 stations, and revised wing-store limits.
 - **Aryx F-16VX Viper II:** a separate `$70m` King Viper variant with more capacitor capacity, more flares, dedicated electronic-warfare pods, NATO-facing weapon names, and a six-bomb GBU-38 rack.
 - **Project 2082 FS-3 Ternion:** a revised and consistently enforced pylon/loadout configuration.
 
 ## Multiplayer compatibility
 
-TGBR uses matchmaking protocol `tgbr-v57`. Vanilla clients and clients using a different TGBR version cannot join a TGBR server.
+Current source builds use matchmaking protocol `tgbr-v58`. Vanilla clients and clients using a different TGBR version cannot join a TGBR server.
 
 ## Building from source
 
@@ -42,3 +43,4 @@ dotnet build .\TheGreatBigRebalancing.sln -c Release
 ```
 
 Game binaries and extracted game assets are not included. No open-source license has been granted.
+HPW Editor 2 remains available to developers in the source tree but is excluded from ordinary release builds.

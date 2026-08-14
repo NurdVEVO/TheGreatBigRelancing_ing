@@ -1,5 +1,37 @@
 # The Great Big Rebalancing — Release Notes
 
+## 0.4.66 — 2026-08-14
+
+For **Nuclear Option 0.34**.
+
+For the complete player-facing breakdown, see [Detailed Changes](https://github.com/NurdVEVO/TheGreatBigRelancing_ing/blob/main/DETAILED_CHANGES.md).
+
+### Additions
+
+- Added the first compatibility pass for the **Aryx Weapon Pack**.
+  - Added dedicated ETS targeting-pod stations to the **F-99 Shrike** and **FS-41 Eclipse**.
+  - Added two outboard MMR-S3 stations to the FS-41.
+  - Added dedicated paired stations for the FS-41's 450 kg and 1,200 kg drop tanks.
+
+### Changes
+
+- Limited the FS-41 moving Wing Pylons to single MMR-S3 and AAM-29 Scythe missiles.
+- Removed triple AAM-29 Scythe racks, ARAD-116 missiles, and drop tanks from the FS-41 Wing Glove Pylons.
+- FS-41 drop tanks must now use their dedicated stations.
+- Finalized the F-99 outer-pylon arrangement while preserving its linked fore and aft centerline stations.
+
+### Fixes
+
+- FS-41 outboard stations now activate the existing Wing Glove pylon fairings when loaded.
+- Corrected the F-99 outer-pylon models and placement.
+- Removed invalid pylon-visual data from the F-99 targeting-pod station.
+
+### Compatibility
+
+- TGBR matchmaking protocol: `tgbr-v58`
+- HPW Editor 2 remains a development tool and is excluded from the public DLL.
+- DLL SHA-256: `30152399055BF1545B29ABC4DC4E270054639CEBC07BC8C1FD36B47CAC7AA6CC`
+
 ## 0.4.65 — First Release — 2026-08-09
 
 For **Nuclear Option 0.34**.
