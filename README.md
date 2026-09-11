@@ -27,20 +27,12 @@ These features appear only when their source aircraft mods are already installed
 
 - **Aryx F-99 Shrike:** new outer IRM-S2 pylons and a two-position centerline mount.
 - **Aryx FS-41 Eclipse:** dedicated targeting-pod and drop-tank stations, two new outboard MMR-S3 stations, and revised wing-store limits.
-- **Aryx F-16VX Viper II:** a separate `$70m` King Viper variant with more capacitor capacity, more flares, dedicated electronic-warfare pods, NATO-facing weapon names, and a six-bomb GBU-38 rack.
+- **F-16VX Viper II:** a separate `$70m` King Viper variant with more capacitor capacity, more flares, dedicated electronic-warfare pods, NATO-facing weapon names, and a six-bomb GBU-38 rack.
 - **Project 2082 FS-3 Ternion:** a revised and consistently enforced pylon/loadout configuration.
 
 ## Multiplayer compatibility
 
 Current source builds use matchmaking protocol `tgbr-v58`. Vanilla clients and clients using a different TGBR version cannot join a TGBR server.
 
-## Building from source
-
-The project requires Nuclear Option 0.34 reference assemblies and the installed game's BepInEx assemblies. Copy `Directory.Build.local.props.example` to `Directory.Build.local.props`, set the two paths, then run:
-
-```powershell
-dotnet build .\TheGreatBigRebalancing.sln -c Release
-```
-
-Game binaries and extracted game assets are not included. No open-source license has been granted.
-HPW Editor 2 remains available to developers in the source tree but is excluded from ordinary release builds.
+## This Project is not official, affiliated with, or endorsed by, Shockfront Studios.
+Copyright © 2026 Shockfront Studios. Shockfront Studios and Nuclear Option are trademarks or registered trademarks of Shockfront Studios in the U.S. and/or other countries. All other trademarks are the property of their respective owners.
